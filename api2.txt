@@ -1,1 +1,36 @@
-hi
+const axios = require("axios");
+
+const url =
+  "https://customer-analytics-34146.my.salesforce-sites.com/services/apexrest/buyStocks";
+const rollNumber = "2110990590";
+const company = "Bajaj Finserv Ltd";
+const currentPrice = 1578.45;
+const accountNumber = "BFHL0018679";
+const githubRepoLink =
+  "https://github.com/Harshita8526/Bajaj_Harshita_Kashyap_2110990590";
+
+const headers = {
+  "content-type": "application/json",
+  "bfhl-auth": rollNumber,
+};
+
+const data = {
+  company,
+  currentPrice,
+  accountNumber,
+  githubRepoLink,
+};
+
+axios
+  .post(url, data, { headers })
+  .then((response) => {
+    console.log("Response:", response.data);
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  });
+
+
+totalStocksLeft: 999,
+  shareCertificateNumber: 'DMAT1860186122',
+  isSuccess: true
